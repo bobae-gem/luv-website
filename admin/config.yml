@@ -1,0 +1,156 @@
+# =========================================================
+# LUV WORLD — Sveltia CMS 설정 (Decap 호환)
+#
+# ⚠️ 이 파일은 GitHub + Netlify 연동 후에 실제로 작동합니다.
+#    아래 backend.repo 의 "GITHUB아이디/저장소이름" 을
+#    실제 GitHub 저장소로 바꿔야 해요. (예: jesluv/luv-website)
+# =========================================================
+
+backend:
+  name: github
+  repo: bobae-gem/luv-website      # GitHub 저장소
+  branch: main
+
+# 이미지(썸네일·프로필 등) 업로드 위치
+media_folder: "assets"
+public_folder: "assets"
+
+# data.json 한 파일을 폼으로 편집합니다.
+collections:
+  - name: "site"
+    label: "LUV 사이트 내용"
+    delete: false
+    files:
+      - name: "data"
+        label: "사이트 데이터 (공지·일정·링크·영상)"
+        file: "data.json"
+        description: "공지·방송일정·링크·영상 등 사이트 내용을 여기서 수정하고 저장하면 사이트에 반영돼요."
+        fields:
+          # ---------- 1) 링크 ----------
+          - label: "🔗 링크 (LINKS)"
+            name: "LINKS"
+            widget: object
+            fields:
+              - { label: "SOOP 방송", name: "soopLive", widget: "string", required: false }
+              - { label: "LUV 유튜브", name: "ytLuv", widget: "string", required: false }
+              - { label: "LUV NIGHT", name: "ytNight", widget: "string", required: false }
+              - { label: "LITTLE LUV", name: "ytLittleluv", widget: "string", required: false }
+              - { label: "LUV DANCE", name: "ytDance", widget: "string", required: false }
+              - { label: "LUV AI", name: "ytAi", widget: "string", required: false }
+              - { label: "LUV BGM", name: "ytBgm", widget: "string", required: false }
+              - { label: "TikTok", name: "tiktok", widget: "string", required: false }
+              - { label: "Instagram", name: "instagram", widget: "string", required: false }
+              - { label: "샤오홍슈", name: "xiaohongshu", widget: "string", required: false }
+              - { label: "카카오톡", name: "kakao", widget: "string", required: false }
+              - { label: "팬카페", name: "fanCafe", widget: "string", required: false }
+              - { label: "굿즈", name: "goods", widget: "string", required: false }
+              - { label: "후원", name: "donate", widget: "string", required: false }
+              - { label: "이메일", name: "email", widget: "string", required: false }
+
+          # ---------- 2) 공식 공지 ----------
+          - label: "📢 공식 공지 (OFFICIAL_NOTICES)"
+            name: "OFFICIAL_NOTICES"
+            widget: list
+            summary: "[{{fields.label}}] {{fields.text}}"
+            fields:
+              - { label: "분류", name: "type", widget: "select", options: ["all", "youtube", "brand", "event", "update"], default: "youtube" }
+              - { label: "배지글자", name: "label", widget: "string" }
+              - { label: "내용", name: "text", widget: "string" }
+              - { label: "링크", name: "link", widget: "string", required: false }
+
+          # ---------- 3) 방송 공지 ----------
+          - label: "📺 방송 공지 (LIVE_NOTICES)"
+            name: "LIVE_NOTICES"
+            widget: list
+            summary: "[{{fields.label}}] {{fields.text}}"
+            fields:
+              - { label: "분류", name: "type", widget: "select", options: ["all", "soop", "rest", "change", "viewer"], default: "soop" }
+              - { label: "배지글자", name: "label", widget: "string" }
+              - { label: "내용", name: "text", widget: "string" }
+              - { label: "링크", name: "link", widget: "string", required: false }
+
+          # ---------- 4) 방송일정 ----------
+          - label: "📅 방송일정 (SCHEDULE)"
+            name: "SCHEDULE"
+            widget: list
+            summary: "{{fields.date}} {{fields.time}} · {{fields.title}}"
+            fields:
+              - { label: "날짜 (YYYY-MM-DD)", name: "date", widget: "string", hint: "예: 2026-07-05" }
+              - { label: "시간", name: "time", widget: "string", default: "20:00" }
+              - { label: "제목", name: "title", widget: "string" }
+              - { label: "종류", name: "type", widget: "select", options: ["live", "youtube"], default: "live" }
+
+          # ---------- 5) 콘텐츠 카드 (데이터 보존용; 편집 가능) ----------
+          - label: "💗 LUV 콘텐츠 카드 (CONTENTS)"
+            name: "CONTENTS"
+            widget: list
+            summary: "{{fields.name}} — {{fields.desc}}"
+            fields:
+              - { label: "이모지", name: "emoji", widget: "string", required: false }
+              - { label: "이름", name: "name", widget: "string" }
+              - { label: "설명", name: "desc", widget: "string", required: false }
+              - { label: "플랫폼", name: "platform", widget: "string", required: false }
+              - { label: "링크", name: "link", widget: "string", required: false }
+              - { label: "버튼글자", name: "btn", widget: "string", required: false }
+              - { label: "색1(accent)", name: "accent", widget: "string", required: false }
+              - { label: "색2(soft)", name: "soft", widget: "string", required: false }
+
+          # ---------- 6) 유튜브 채널 ----------
+          - label: "▶ 유튜브 채널 (CHANNELS)"
+            name: "CHANNELS"
+            widget: list
+            summary: "{{fields.name}}"
+            fields:
+              - { label: "이모지", name: "emoji", widget: "string", required: false }
+              - { label: "채널명", name: "name", widget: "string" }
+              - { label: "사진경로", name: "img", widget: "string", required: false }
+              - { label: "설명", name: "desc", widget: "string", required: false }
+              - { label: "링크", name: "link", widget: "string", required: false }
+
+          # ---------- 7) SNS ----------
+          - label: "📱 SNS"
+            name: "SNS"
+            widget: list
+            summary: "{{fields.label}}"
+            fields:
+              - { label: "아이콘", name: "icon", widget: "string", required: false }
+              - { label: "이름", name: "label", widget: "string" }
+              - { label: "링크", name: "link", widget: "string", required: false }
+              - { label: "색", name: "color", widget: "string", required: false }
+
+          # ---------- 8) 최신 클립 ----------
+          - label: "🎬 최신 클립 (CLIPS)"
+            name: "CLIPS"
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "썸네일경로", name: "img", widget: "string", required: false }
+              - { label: "제목", name: "title", widget: "string" }
+              - { label: "조회수", name: "views", widget: "string", required: false }
+              - { label: "길이", name: "duration", widget: "string", required: false }
+              - { label: "링크(유튜브 URL)", name: "link", widget: "string", required: false }
+
+          # ---------- 9) 팬공간 ----------
+          - label: "💌 팬공간 (FAN)"
+            name: "FAN"
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "이모지", name: "emoji", widget: "string", required: false }
+              - { label: "제목", name: "title", widget: "string" }
+              - { label: "설명", name: "desc", widget: "string", required: false }
+              - { label: "지금 열기?", name: "ready", widget: "boolean", default: false }
+              - { label: "링크", name: "link", widget: "string", required: false }
+
+          # ---------- 10) 굿즈/후원 ----------
+          - label: "🎁 굿즈/후원 (SUPPORT)"
+            name: "SUPPORT"
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "카드색", name: "mod", widget: "select", options: ["goods", "donate"], default: "goods" }
+              - { label: "이모지", name: "emoji", widget: "string", required: false }
+              - { label: "제목", name: "title", widget: "string" }
+              - { label: "설명", name: "desc", widget: "string", required: false }
+              - { label: "버튼글자", name: "btn", widget: "string", required: false }
+              - { label: "링크", name: "link", widget: "string", required: false }
