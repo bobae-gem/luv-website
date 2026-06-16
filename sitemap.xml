@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  LUV WORLD — sitemap.xml
+  ▼ 도메인 확정 후 <loc> 의 주소를 실제 주소로 바꿔주세요.
+  단일 페이지(원페이지) 사이트라 메인 1개만 등록되어 있습니다.
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://luv-world.netlify.app/</loc>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://luv-world.netlify.app/live.html</loc>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+</urlset>

@@ -1,0 +1,67 @@
+{
+  "LINKS": {
+    "soopLive": "https://www.sooplive.com/station/dmsgkdn12",
+    "ytLuv": "https://www.youtube.com/@LUV9696",
+    "ytNight": "https://www.youtube.com/@luv_night",
+    "ytLittleluv": "https://www.youtube.com/@%EB%A6%AC%ED%8B%80%EB%9F%BDLittleLUV",
+    "ytDance": "https://www.youtube.com/@%EB%9F%BD%EB%8C%84%EC%8A%A4LUV_dance",
+    "ytAi": "https://www.youtube.com/@%EB%9F%BDAILUV_AI",
+    "ytBgm": "https://www.youtube.com/@%EB%9F%BDLUV_BGM",
+    "tiktok": "#",
+    "instagram": "#",
+    "xiaohongshu": "#",
+    "kakao": "#",
+    "fanCafe": "#",
+    "goods": "#",
+    "donate": "#",
+    "email": "mailto:171_lini@naver.com"
+  },
+  "OFFICIAL_NOTICES": [
+    { "type": "youtube", "label": "YouTube", "text": "LUV NIGHT 새 영상 업로드", "link": "https://www.youtube.com/@luv_night" },
+    { "type": "event", "label": "이벤트", "text": "팬카페 오픈 이벤트 안내", "link": "#" }
+  ],
+  "LIVE_NOTICES": [
+    { "type": "broadcast", "label": "방송공지", "text": "6월 28일, 방송으로 돌아옵니다! 오랜만에 만나요 ♥", "link": "https://www.sooplive.com/station/dmsgkdn12" },
+    { "type": "content", "label": "컨텐츠공지", "text": "앞으로 콘텐츠에 관련된 공지들은 여기에 올릴 예정입니다.", "link": "#" }
+  ],
+  "SCHEDULE": [
+    { "date": "2026-06-28", "time": "", "title": "방송 복귀", "type": "live" },
+    { "date": "2026-06-29", "time": "AM 10:00", "title": "방송", "type": "live" },
+    { "date": "2026-06-30", "time": "AM 10:00", "title": "방송", "type": "live" }
+  ],
+  "CONTENTS": [
+    { "emoji": "♥", "name": "LUV", "desc": "종합 라이브 방송", "platform": "SOOP LIVE", "link": "https://www.sooplive.com/station/dmsgkdn12", "btn": "오늘의 콘텐츠 보러가기", "accent": "#ff5f8f", "soft": "#ffe1ea" },
+    { "emoji": "🌙", "name": "LUV NIGHT", "desc": "마음근력 힐링 토크", "platform": "YouTube", "link": "https://www.youtube.com/@luv_night", "btn": "", "accent": "#9a7bd6", "soft": "#ece1fb" },
+    { "emoji": "👶", "name": "LITTLE LUV", "desc": "육아 & 일상 이야기", "platform": "YouTube", "link": "https://www.youtube.com/@%EB%A6%AC%ED%8B%80%EB%9F%BDLittleLUV", "btn": "", "accent": "#ff9f68", "soft": "#ffe9d6" },
+    { "emoji": "💃", "name": "LUV DANCE", "desc": "댄스 & 챌린지", "platform": "YouTube", "link": "https://www.youtube.com/@%EB%9F%BD%EB%8C%84%EC%8A%A4LUV_dance", "btn": "", "accent": "#ff5fb0", "soft": "#ffe1f1" },
+    { "emoji": "🤖", "name": "LUV AI", "desc": "AI 프로젝트 & 자동화", "platform": "YouTube", "link": "https://www.youtube.com/@%EB%9F%BDAILUV_AI", "btn": "", "accent": "#4cb8d6", "soft": "#d6f0f8" },
+    { "emoji": "🎵", "name": "LUV BGM", "desc": "음악 & 플레이리스트", "platform": "YouTube", "link": "https://www.youtube.com/@%EB%9F%BDLUV_BGM", "btn": "", "accent": "#5fc79a", "soft": "#d6f5e7" }
+  ],
+  "CHANNELS": [
+    { "emoji": "♥", "name": "LUV", "img": "assets/ch-luv.png", "desc": "러브의 메인 채널", "link": "https://www.youtube.com/@LUV9696" },
+    { "emoji": "🌙", "name": "LUV NIGHT", "img": "assets/ch-night.png", "desc": "마음근력 힐링 토크", "link": "https://www.youtube.com/@luv_night" },
+    { "emoji": "👶", "name": "LITTLE LUV", "img": "assets/ch-little.png", "desc": "육아 & 일상 이야기", "link": "https://www.youtube.com/@%EB%A6%AC%ED%8B%80%EB%9F%BDLittleLUV" },
+    { "emoji": "💃", "name": "LUV DANCE", "img": "assets/ch-dance.png", "desc": "댄스 & 챌린지", "link": "https://www.youtube.com/@%EB%9F%BD%EB%8C%84%EC%8A%A4LUV_dance" },
+    { "emoji": "🤖", "name": "LUV AI", "img": "assets/ch-ai.png", "desc": "함께 AI 배우기", "link": "https://www.youtube.com/@%EB%9F%BDAILUV_AI" },
+    { "emoji": "🎵", "name": "LUV BGM", "img": "assets/ch-bgm.png", "desc": "음악 & 플레이리스트", "link": "https://www.youtube.com/@%EB%9F%BDLUV_BGM" }
+  ],
+  "SNS": [
+    { "icon": "🎵", "label": "TikTok", "link": "#", "color": "#222" },
+    { "icon": "📷", "label": "Instagram", "link": "#", "color": "#e1407a" },
+    { "icon": "📕", "label": "샤오홍슈", "link": "#", "color": "#ff2442" },
+    { "icon": "💬", "label": "카카오톡 채널", "link": "#", "color": "#f5c000" }
+  ],
+  "CLIPS": [
+    { "img": "assets/clip-1.png", "title": "무너졌던 밤, 다시 일어선 이야기", "views": "조회수 1.2만회", "duration": "08:14", "link": "https://www.youtube.com/@luv_night" },
+    { "img": "assets/clip-2.png", "title": "오늘의 육아 브이로그 — 작은 행복", "views": "조회수 8.6천회", "duration": "12:03", "link": "https://www.youtube.com/@%EB%A6%AC%ED%8B%80%EB%9F%BDLittleLUV" },
+    { "img": "assets/clip-3.png", "title": "스타 명경기 하이라이트 모음", "views": "조회수 3.4만회", "duration": "05:47", "link": "https://www.sooplive.com/station/dmsgkdn12" }
+  ],
+  "FAN": [
+    { "emoji": "📝", "title": "팬 게시판", "desc": "러브에게 남기는 한마디를 모을 공간이에요.", "ready": false, "link": "#" },
+    { "emoji": "🎨", "title": "팬아트 갤러리", "desc": "팬들이 그린 러브를 함께 감상하는 공간이에요.", "ready": false, "link": "#" }
+  ],
+  "SUPPORT": [
+    { "mod": "goods", "emoji": "🛍️", "title": "LUV 공식 굿즈", "desc": "준비중입니다", "btn": "준비중", "link": "#" },
+    { "mod": "donate", "emoji": "💝", "title": "LUV 후원하기", "desc": "준비중입니다", "btn": "준비중", "link": "#" }
+  ]
+}

@@ -1,0 +1,20 @@
+# LUV WORLD — Netlify 배포 설정
+# 빌드 과정이 없는 순수 정적 사이트이므로 현재 폴더를 그대로 게시합니다.
+
+[build]
+  publish = "."
+  # 정적 사이트라 별도 빌드 명령이 필요 없습니다.
+  command = ""
+
+# 기본 보안 / 캐시 헤더
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "SAMEORIGIN"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"

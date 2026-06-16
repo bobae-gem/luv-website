@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>방송홈 히어로 — 사진 없이 라이브감 시안</title>
+  <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Jua&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body { padding-bottom: 4rem; overflow-x: hidden; }
+    .demo-wrap { max-width: 1180px; margin: 0 auto; padding: 1.2rem; }
+    .demo-label {
+      display: inline-block; font-family: var(--font-en); font-weight: 700; color: #fff;
+      background: linear-gradient(120deg, #ff3d71, #ff9ec4);
+      padding: .35rem 1rem; border-radius: 999px; font-size: .9rem; margin: 2.6rem 0 1rem;
+    }
+    .demo-frame { border: 1px dashed var(--pink-300); border-radius: 26px; overflow: hidden; }
+
+    /* 공통 라이브 뱃지 */
+    .live-badge {
+      display: inline-flex; align-items: center; gap: .5rem;
+      background: #fff; color: #ff2d55; font-weight: 800; font-family: var(--font-en);
+      padding: .4rem 1rem; border-radius: 999px; font-size: .9rem; letter-spacing: .05em;
+      box-shadow: 0 6px 18px -8px rgba(255,45,85,.5); border: 1px solid #ffd6e0;
+    }
+    .live-badge .dot { width: 9px; height: 9px; border-radius: 50%; background: #ff2d55; animation: lbp 1.4s infinite; }
+    @keyframes lbp { 0%{box-shadow:0 0 0 0 rgba(255,45,85,.6)} 70%{box-shadow:0 0 0 8px rgba(255,45,85,0)} 100%{box-shadow:0 0 0 0 rgba(255,45,85,0)} }
+
+    /* 시안 1: 빛 글로우 + 반짝임 */
+    .lh1 { position: relative; overflow: hidden; text-align: center; padding: clamp(3rem,2rem+5vw,5.5rem) 1.5rem;
+      background: radial-gradient(circle at 50% 25%, #ffe9f3 0%, #fff5fb 55%, #fffafc 100%); }
+    .lh1-glow { position: absolute; top: -20%; left: 50%; width: 520px; height: 520px; transform: translateX(-50%);
+      background: radial-gradient(circle, rgba(255,126,179,.45), transparent 65%); filter: blur(20px); animation: glow 5s ease-in-out infinite; }
+    @keyframes glow { 0%,100%{opacity:.6;transform:translateX(-50%) scale(1)} 50%{opacity:1;transform:translateX(-50%) scale(1.12)} }
+    .spark { position: absolute; border-radius: 50%; background: #fff; box-shadow: 0 0 8px 2px rgba(255,190,220,.9); animation: floaty 6s ease-in-out infinite; }
+    @keyframes floaty { 0%,100%{transform:translateY(0);opacity:.5} 50%{transform:translateY(-18px);opacity:1} }
+    .lh1 .lh-title { font-family: var(--font-en); font-weight: 800; font-size: clamp(3rem,1.5rem+7vw,6.5rem); line-height:.95;
+      background: linear-gradient(120deg,#ff3d71,#ff8fc4 55%,#c79bf0); -webkit-background-clip:text; background-clip:text; color:transparent; margin:1rem 0 .3rem; }
+    .lh-rel { position: relative; z-index: 1; }
+
+    /* 시안 2: 초대형 타이포 */
+    .lh2 { text-align: center; padding: clamp(2.5rem,1.5rem+4vw,4.5rem) 1rem; background: linear-gradient(160deg,#fff,#fff2f8); }
+    .lh2-title { font-family: var(--font-en); font-weight: 800; font-size: clamp(3.5rem,2rem+11vw,9rem); line-height:.9; letter-spacing:-.01em;
+      background: linear-gradient(120deg,#ff3d71,#ff9ec4); -webkit-background-clip:text; background-clip:text; color:transparent; }
+    .lh2-sub { font-family: var(--font-head); color: var(--plum); font-size: clamp(1.1rem,.9rem+1vw,1.6rem); margin:.6rem 0 1.4rem; }
+
+    /* 시안 3: 방송 정보 카드 중앙 */
+    .lh3 { padding: clamp(2.5rem,1.5rem+4vw,4.5rem) 1.5rem; display:grid; place-items:center;
+      background: radial-gradient(circle at 50% 0%, #ffe9f3, #fffafc 60%); }
+    .lh3-card { background:#fff; border:1px solid var(--pink-100); border-radius:28px; padding:2.2rem 2rem; text-align:center;
+      box-shadow: var(--shadow-pop); max-width:520px; width:100%; }
+    .lh3-today { font-family:var(--font-head); color:var(--pink-600); font-size:1.3rem; margin:.8rem 0 .2rem; }
+    .lh3-time { color:var(--ink-soft); margin-bottom:1.3rem; }
+  </style>
+</head>
+<body class="live-page">
+  <div class="demo-wrap">
+    <h1 style="font-family:var(--font-en);color:#ff3d71;">방송홈 히어로 — 사진 없이 라이브감 시안</h1>
+    <p style="color:var(--ink-soft);">실제 사이트는 그대로예요. 사진 없이 글자·빛·라이브 뱃지로 분위기를 살린 3가지예요.</p>
+
+    <!-- 시안 1 -->
+    <span class="demo-label">시안 1 · 은은한 빛 + 반짝임 (부드러운 라이브)</span>
+    <div class="demo-frame">
+      <section class="lh1">
+        <div class="lh1-glow"></div>
+        <span class="spark" style="top:18%;left:18%;width:7px;height:7px;"></span>
+        <span class="spark" style="top:30%;left:80%;width:9px;height:9px;animation-delay:1s;"></span>
+        <span class="spark" style="top:62%;left:12%;width:6px;height:6px;animation-delay:2s;"></span>
+        <span class="spark" style="top:70%;left:85%;width:8px;height:8px;animation-delay:.5s;"></span>
+        <div class="lh-rel">
+          <span class="live-badge"><span class="dot"></span> LIVE</span>
+          <h2 class="lh-title">ENDOLPHIN</h2>
+          <p class="hero-sub" style="margin-top:.4rem;">엔돌핀의 방송 공간 · 종합 라이브 방송 <span class="heart">♥</span></p>
+          <div class="hero-cta" style="justify-content:center;margin-top:1.4rem;">
+            <a href="#" class="btn btn--primary btn--xl">▶ 지금 방송 보러가기</a>
+            <a href="#" class="btn btn--soop">SOOP에서 만나요</a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- 시안 2 -->
+    <span class="demo-label">시안 2 · 초대형 글자 (임팩트)</span>
+    <div class="demo-frame">
+      <section class="lh2">
+        <span class="live-badge"><span class="dot"></span> LIVE NOW</span>
+        <h2 class="lh2-title">ENDOLPHIN</h2>
+        <p class="lh2-sub">엔돌핀의 방송 공간 — SOOP에서 만나요 <span class="heart">♥</span></p>
+        <div class="hero-cta" style="justify-content:center;">
+          <a href="#" class="btn btn--primary btn--xl">▶ 지금 방송 보러가기</a>
+        </div>
+      </section>
+    </div>
+
+    <!-- 시안 3 -->
+    <span class="demo-label">시안 3 · 방송 정보 카드 중앙 (오늘 방송 강조)</span>
+    <div class="demo-frame">
+      <section class="lh3">
+        <div class="lh3-card">
+          <span class="live-badge"><span class="dot"></span> LIVE</span>
+          <h2 class="lh3-today">오늘 20:00 · 종합 라이브 방송</h2>
+          <p class="lh3-time">엔돌핀의 방송 공간 · SOOP에서 만나요 ♥</p>
+          <div class="hero-cta" style="justify-content:center;">
+            <a href="#" class="btn btn--primary btn--xl">▶ 지금 방송 보러가기</a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <p style="margin-top:2.5rem;color:var(--plum);font-weight:700;">
+      → 마음에 드는 번호(1·2·3)를 말씀해 주시면 실제 방송홈 히어로에 적용할게요. 섞거나 더 바꿔도 돼요.
+    </p>
+  </div>
+</body>
+</html>

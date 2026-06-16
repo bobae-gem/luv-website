@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ===== SEO ===== -->
+  <title>ENDOLPHIN — 엔돌핀의 방송 공간</title>
+  <meta name="description" content="엔돌핀(ENDOLPHIN)의 SOOP 종합 라이브 방송 공간. 오늘 방송, 방송 일정, 방송 공지를 한 곳에서. SOOP에서 만나요." />
+  <meta name="keywords" content="ENDOLPHIN, 엔돌핀, SOOP, 방송, 라이브, 종합 라이브 방송, 방송일정" />
+  <meta name="author" content="ENDOLPHIN" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#ff5f8f" />
+  <link rel="canonical" href="https://luv-world.netlify.app/live.html" />
+
+  <!-- ===== Favicon (인라인 SVG, 라이브 점) ===== -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Crect%20width='100'%20height='100'%20rx='24'%20fill='%23ff3d71'/%3E%3Ctext%20x='50'%20y='54'%20font-size='52'%20text-anchor='middle'%20dominant-baseline='central'%20fill='white'%3E%E2%96%B6%3C/text%3E%3C/svg%3E" />
+
+  <!-- ===== Open Graph ===== -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="ENDOLPHIN" />
+  <meta property="og:title" content="ENDOLPHIN — 엔돌핀의 방송 공간" />
+  <meta property="og:description" content="엔돌핀의 종합 라이브 방송. 오늘 방송·일정·공지를 한 곳에서, SOOP에서 만나요 ♥" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:url" content="https://luv-world.netlify.app/live.html" />
+  <meta property="og:image" content="assets/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ENDOLPHIN — 엔돌핀의 방송 공간" />
+  <meta name="twitter:description" content="엔돌핀의 종합 라이브 방송, SOOP에서 만나요 ♥" />
+  <meta name="twitter:image" content="assets/og-image.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Jua&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="live-page">
+  <!-- ===== Header / Nav ===== -->
+  <header class="site-header" id="top">
+    <div class="nav-inner">
+      <a href="#top" class="brand" aria-label="ENDOLPHIN 홈">
+        <img src="assets/logo.png" alt="ENDOLPHIN 로고" class="brand-logo"
+             onerror="this.classList.add('img-fallback');this.dataset.emoji='▶';" />
+        <span class="brand-name">ENDOLPHIN</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks" aria-label="방송 네비게이션">
+        <a href="#top">LIVE</a>
+        <a href="#liveNoticeSec">공지사항</a>
+        <a href="#schedule">방송일정</a>
+        <a href="#sigdance">시그댄스</a>
+        <a href="index.html">러브월드</a>
+      </nav>
+
+      <a href="#" class="nav-live-btn" data-link="soopLive">
+        <span class="live-dot" aria-hidden="true"></span> LIVE
+      </a>
+
+      <button class="hamburger" id="hamburger" aria-label="메뉴 열기" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== HERO (방송, 사진 없이 라이브감) ===== -->
+    <section class="hero--live live-hero" aria-labelledby="live-heading">
+      <div class="live-hero-glow" aria-hidden="true"></div>
+      <span class="live-spark" style="top:18%;left:16%;width:7px;height:7px;" aria-hidden="true"></span>
+      <span class="live-spark" style="top:28%;left:82%;width:9px;height:9px;animation-delay:1s;" aria-hidden="true"></span>
+      <span class="live-spark" style="top:64%;left:12%;width:6px;height:6px;animation-delay:2s;" aria-hidden="true"></span>
+      <span class="live-spark" style="top:72%;left:86%;width:8px;height:8px;animation-delay:.5s;" aria-hidden="true"></span>
+
+      <div class="live-hero-inner">
+        <span class="live-badge"><span class="dot" aria-hidden="true"></span> LIVE</span>
+        <h1 class="live-hero-title" id="live-heading">ENDOLPHIN</h1>
+        <p class="hero-sub">엔돌핀의 방송 공간 · 종합 라이브 방송 <span class="heart">♥</span></p>
+        <div class="today-live today-live--big" id="todayLive"></div>
+        <div class="hero-cta">
+          <a href="#" class="btn btn--primary btn--xl" data-link="soopLive">
+            <span class="btn-emoji" aria-hidden="true">▶</span> 지금 방송 보러가기
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 공지사항 (방송공지 / 컨텐츠공지) ===== -->
+    <section class="section" id="liveNoticeSec" aria-labelledby="livenotice-heading">
+      <div class="section-head">
+        <h2 class="section-title" id="livenotice-heading">공지사항</h2>
+      </div>
+      <article class="info-card live-notice-card">
+        <div class="notice-filters" id="liveNoticeFilters"></div>
+        <ul class="notice-list" id="liveNotice"></ul>
+      </article>
+    </section>
+
+    <!-- ===== 방송일정 (캘린더) ===== -->
+    <section class="section" id="schedule" aria-labelledby="schedule-heading">
+      <div class="section-head">
+        <h2 class="section-title" id="schedule-heading">방송일정</h2>
+        <p class="section-desc">엔돌핀의 방송 일정이에요. 날짜를 누르면 상세가 보여요.</p>
+      </div>
+      <div class="calendar">
+        <div class="cal-head">
+          <button class="cal-nav" id="calPrev" aria-label="이전 달">‹</button>
+          <h3 class="cal-title" id="calTitle"></h3>
+          <button class="cal-nav" id="calNext" aria-label="다음 달">›</button>
+        </div>
+        <div class="cal-weekdays" id="calWeekdays" aria-hidden="true"></div>
+        <div class="cal-grid" id="calGrid" role="grid"></div>
+      </div>
+      <div class="cal-detail" id="calDetail" aria-live="polite"></div>
+    </section>
+
+    <!-- ===== 시그댄스 ===== -->
+    <section class="section" id="sigdance" aria-labelledby="sigdance-heading">
+      <div class="section-head">
+        <h2 class="section-title" id="sigdance-heading">시그댄스</h2>
+        <p class="section-desc">엔돌핀이 출 수 있는 춤 목록이에요. 방송에서 신청해 보세요!</p>
+      </div>
+      <div class="sigdance-grid" id="sigdanceCards"></div>
+    </section>
+
+    <!-- ===== 공식 홈 이동 배너 ===== -->
+    <section class="section">
+      <a href="index.html" class="live-banner live-banner--official">
+        <div class="live-banner-text">
+          <span class="live-banner-label">♥ LUV WORLD</span>
+          <strong>러브월드로 가기</strong>
+          <span class="live-banner-sub">유튜브 6채널·SNS·콘텐츠·굿즈를 한 곳에서</span>
+        </div>
+        <span class="live-banner-arrow" aria-hidden="true">→</span>
+      </a>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="assets/logo.png" alt="ENDOLPHIN 로고" class="footer-logo"
+             onerror="this.classList.add('img-fallback');this.dataset.emoji='▶';" />
+        <p class="footer-tag">엔돌핀의 방송 공간 <span class="heart">♥</span></p>
+      </div>
+      <div class="footer-meta">
+        <a href="#" data-link="email" class="footer-link">문의 : 171_lini@naver.com</a>
+        <a href="index.html" class="footer-link">러브월드</a>
+      </div>
+      <p class="footer-copy">Copyright © 2026 LUV. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- 모바일 상시 방송 버튼 -->
+  <a href="#" class="floating-live" data-link="soopLive" aria-label="지금 방송 보러가기">
+    <span class="live-dot" aria-hidden="true"></span>
+    <span class="floating-live-text">방송 보러가기</span>
+  </a>
+
+  <script src="script.js"></script>
+  <script src="admin-mode.js"></script>
+</body>
+</html>

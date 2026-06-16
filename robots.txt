@@ -1,0 +1,9 @@
+# LUV WORLD — robots.txt
+# 모든 검색엔진 크롤러 허용 (단, 관리자 페이지는 숨김)
+User-agent: *
+Allow: /
+Disallow: /admin.html
+Disallow: /admin/
+
+# 사이트맵 위치 (도메인 확정 후 아래 주소를 실제 주소로 바꿔주세요)
+Sitemap: https://luv-world.netlify.app/sitemap.xml
